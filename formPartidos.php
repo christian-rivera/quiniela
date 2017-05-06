@@ -12,18 +12,19 @@
 </head>
 <body>
 <div class="container topOff">
-	<form>
+	
 	<div class="row">
 		<div class="form-group mx-auto">
 			<label class="mr-sm-2" for="jornada">Jornada</label>
 			 <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="jornada">
-			   <option selected>Selecciona...</option>
+			   <option selected value="0">Selecciona...</option>
 			   <option value="1">One</option>
 			   <option value="2">Two</option>
 			   <option value="3">Three</option>
 			 </select>
 		</div>
 	</div>
+	<form id=formulario>
 		<div class="row">
 			<div class="col-md-6">
 				<div class="card topOff">
@@ -202,3 +203,17 @@
 </body>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('#formulario button').prop('disabled', true);
+$('#formulario select').prop('disabled', true);
+$('#jornada').change(function(){
+if($(this).val() != '0'){
+	$('#formulario select').prop('disabled', false);
+}
+else{
+	$('#formulario select').prop('disabled', true);
+}
+});
+});
+</script>
