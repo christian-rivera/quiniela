@@ -1,3 +1,10 @@
+<?php  
+include 'bd/db.php';
+//$db = new Db(); 
+//$db->connect();
+//$rows = $db -> select("SELECT * FROM `usuarios`");
+//var_dump($rows);
+?>
 <!DOCTYPE html>
 <html>
 <head>
